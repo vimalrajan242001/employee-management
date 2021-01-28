@@ -1,0 +1,10 @@
+<h3>Creat a new Employee</h3>
+<label for="uid">Uid</label>
+<input type="text" name="uid" class="uid" #uid><br>
+<label for="name">Name</label>
+<input type="text" name="name" class="name" #name><br>
+<label for="age">Age</label>
+<input type="number" name="age" class="age" #age><br>
+<label for="designation">Designation</label>
+<input type="text" class="designation" name="designation" #designation><br>
+<button  (click)="addEmployee(uid.value,name.value,age.value,designation.value)">Add Now</button>
