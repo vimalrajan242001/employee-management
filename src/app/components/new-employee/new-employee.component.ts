@@ -1,3 +1,4 @@
+import { EmployeeservicesService } from './../../service/employeeservices.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-employee.component.css']
 })
 export class NewEmployeeComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(private employeeservices:EmployeeservicesService) { }
 
   ngOnInit(): void {
   }
-addEmployee(uid:string,name:string,age:number,designation:string){
-  console.log(uid , name , age , designation)
+handlesubmit(name:string,age:number,designation:string,uid:string){
+  this.employeeservices.addemployee(name,age,designation,uid)
 }
 }

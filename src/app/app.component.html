@@ -1,2 +1,2 @@
 <app-new-employee></app-new-employee>
-<app-employee-list></app-employee-list>
+<app-employee-list *ngFor="let emp of Employees" [employee]="emp"></app-employee-list>
