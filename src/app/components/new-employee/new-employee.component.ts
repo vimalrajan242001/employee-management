@@ -12,7 +12,7 @@ export class NewEmployeeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-handlesubmit(name:string,age:number,designation:string,uid:string){
-  this.employeeservices.addemployee(name,age,designation,uid)
+handlesubmit(name:string,age:number,designation:string){
+  this.employeeservices.addemployee(name,age,designation)
 }
 }

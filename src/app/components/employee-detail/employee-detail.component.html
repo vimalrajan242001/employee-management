@@ -1,0 +1,9 @@
+<label for="name">Name</label>
+<input type="text" name="name" class="name" [(ngModel)]="Employees.name"><br>
+<label for="age">Age</label>
+<input type="number" name="age" class="age" [(ngModel)]="Employees.age"><br>
+<label for="designation">Designation</label>
+<input type="text" class="designation" name="designation" [(ngModel)]="Employees.designation"><br>
+<button (click)="delete(paramid)">
+    Delete
+</button>

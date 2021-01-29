@@ -1,3 +1,15 @@
-<div>
-    {{employee.uid}} - {{employee.name}} - {{employee.age}} - {{employee.designation}}
+<div *ngIf="Employees.length >0;else elseref">
+<h3>List of all Employee</h3>
+<div class="card" *ngFor="let employee of Employees;index as i">
+    <div class="content">
+        <span class="title"> name: </span> {{employee.name}}
+    </div>
+    <div class="content"> <span class="title"> age: </span> {{employee.age}}</div>
+    <div class="content"> <span class="title"> designation: </span> {{employee.designation}}</div>
+    <!-- <button class="delete">Delete</button> -->
+    <a [routerLink]="['/employeedetail',i]"><button class="edit">View</button></a>
 </div>
+</div><br>
+<ng-template #elseref>
+<h3>No Employees. Add an Employee</h3>
+</ng-template>

@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
   providers:[EmployeeservicesService]
 })
 export class AppComponent implements OnInit{
-    Employees : {name:string,age:number,designation:string,uid:string}[] = []
+    // Employees : {name:string,age:number,designation:string,uid:string}[] = []
 
 constructor(private employeeservice:EmployeeservicesService){}
 ngOnInit(){
-  this.Employees = this.employeeservice.employees
+  // this.Employees = this.employeeservice.employees
 }
 }

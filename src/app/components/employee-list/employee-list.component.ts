@@ -7,12 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
- @Input() employee : {name:string,age:number,designation:string,uid:string}
+//  @Input() employee : {name:string,age:number,designation:string,uid:string}
+    Employees : {name:string,age:number,designation:string}[] = []
  
 
   constructor(private employeeservice:EmployeeservicesService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  this.Employees = this.employeeservice.employees
+
   }
 
 }
